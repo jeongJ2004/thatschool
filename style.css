@@ -474,7 +474,7 @@ table {
 }
 /* school insta animation */
 .instaimg{
-  background:url('duras_insta.png');
+  background:url('http://lfiduras.com/wp-content/uploads/2020/04/instagram.png');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
@@ -492,7 +492,7 @@ text{
 }
 /* school facebook animation */
 .fbimg{
-  background:url('duras_facebook.png');
+  background:url('http://lfiduras.com/wp-content/uploads/2020/04/fACEBOOK.png');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
@@ -510,7 +510,7 @@ text{
 }
 /* school ggl maps animation */
 .mapsimg{
-  background:url('duras_maps.png');
+  background:url('https://lh3.googleusercontent.com/9tLfTpdILdHDAvGrRm7GdbjWdpbWSMOa0csoQ8pUba9tLP8tq7M4Quks1xuMQAVnAxVfryiDXRzZ-KDnkPv8Sm4g_YFom1ltQHjQ6Q');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
