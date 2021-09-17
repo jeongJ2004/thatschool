@@ -474,7 +474,7 @@ table {
 }
 /* school insta animation */
 .instaimg{
-  background:url('duras_insta.PNG');
+  background:url('duras_insta.png');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
@@ -492,7 +492,7 @@ text{
 }
 /* school facebook animation */
 .fbimg{
-  background:url('duras_facebook.PNG');
+  background:url('duras_facebook.png');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
@@ -510,7 +510,7 @@ text{
 }
 /* school ggl maps animation */
 .mapsimg{
-  background:url('duras_maps.PNG');
+  background:url('duras_maps.png');
   background-size:cover;
   width:40vmin; height:auto;
   display:block;
