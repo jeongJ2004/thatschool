@@ -1,0 +1,532 @@
+body { background-color: #EAEAEA; }
+html, body{
+  margin:0; padding:0;
+  width: 100%; height: 100%;
+}
+/*화면 전체*/
+.wrapper{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  position: relative;
+  transform: translateY(-100%);
+  margin: 0px;
+  padding: 10px;
+  background-color: green;
+  color: lightgray;
+  width: 100%;
+  height: 60px;
+}
+
+/*animation */
+.heading-primary-sub {
+display: block;
+font-size: 70px;
+font-weight: 300;
+letter-spacing: 2px;
+font-family: sans-serif;
+
+animation-name: moveInRight;
+animation-duration: 5s;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Multi Dropdown */
+
+ul#mainmenu {
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  background-color: green;
+  width: 100%
+}
+
+ul#mainmenu ul {
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  background-color: green;
+}
+
+ul#mainmenu ul {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  -moz-transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s;
+  background-color: #CB4E48;
+  padding: 0 10px 0;
+}
+
+ul#mainmenu li:hover>ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul#mainmenu li {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  float: left;
+}
+
+ul#mainmenu li:hover {
+  z-index: 1;
+}
+
+ul#mainmenu ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+ul#mainmenu {
+  z-index: 999;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+}
+
+* html ul#mainmenu li a {
+  display: inline-block;
+}
+
+ul#mainmenu>li {
+  margin: 0;
+}
+
+ul#mainmenu a:active,
+ul#mainmenu a:focus {
+  outline-style: none;
+}
+
+ul#mainmenu a {
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+  text-decoration: none;
+  font: 16px Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+  padding: 17px 70px;
+  background-repeat: repeat;
+}
+
+ul#mainmenu ul li {
+  float: none;
+  margin: 7px 0 0;
+}
+
+ul#mainmenu ul a {
+  text-align: left;
+  padding: 14px 80px;
+  background-color: transparent;
+  color: #EDC1BF;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #BE3C36;
+}
+
+ul#mainmenu li:hover>a,
+ul#mainmenu li a.pressed {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+ul#mainmenu img {
+  border: none;
+  vertical-align: middle;
+  margin-right: 17px;
+}
+
+ul#mainmenu ul span {
+  background-image: none;
+  padding-right: 5px;
+}
+
+ul#mainmenu ul li:hover>a,
+ul#mainmenu ul li a.pressed {
+  background-color: #BC433D;
+  color: black;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #BE3C36;
+}
+
+ul#mainmenu li.menutop>a {
+  background-color: green;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  color: white;
+}
+
+ul#mainmenu li.menutop:hover>a,
+ul#mainmenu li.menutop a.pressed {
+  background-color: red;
+  color: #FFFFFF;
+}
+
+
+.menuA {
+  text-decoration: none;
+  color: green;
+  font-family: Arial;
+  padding-left: 70px;
+}
+
+
+/* 제목 */
+h1 {
+  font-size:45px;
+  text-align:center;
+  border-bottom:2px solid green;
+  margin:0;
+  padding:20px;
+  text-decoration: none;
+  color: green;
+  font-family: Arial;
+}
+/* Intro */
+h2 {
+  padding-left: 330px;
+  padding-top: 5%;
+}
+
+.searchBox {
+    position: absolute;
+    top: 82%;
+    left: 52%;
+    transform:  translate(-50%,50%);
+    background:  #92b8b1;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+h2 span:nth-child(1) {
+  color: #4285F4;
+}
+
+h2 span:nth-child(2) {
+  color: #DB4437;
+}
+h2 span:nth-child(3) {
+  color: #F4B400;
+}
+h2 span:nth-child(4) {
+  color: #0F9D58;
+}
+h2 span:nth-child(5) {
+  color: #4285F4;
+}
+h2 span:nth-child(6) {
+  color: #DB4437;
+}
+h2 span:nth-child(7) {
+  color: #F4B400;
+}
+h2 span:nth-child(8) {
+  color: #0F9D58;
+}
+
+
+
+/* 화면 조정 */
+@media(max-width:500px){
+  #grid{
+    display:block;
+  }
+  .td{
+    border-right:none;
+  }
+  h1{
+    border-bottom:none;
+  }
+}
+
+#nav .t1 {
+
+  border-right:2px solid green;
+  width: 38px;
+  height: 38px
+  margin: 0;
+  padding:15px;
+  padding-left:18px;
+  position: absolute;
+}
+#text{
+  padding-left: 50px;
+  padding-top: 30px;
+}
+.intro{
+  font-family: verdana;
+}
+/* insta img location */
+.instaimg{
+  position: relative;
+  top: -70px;
+  left:-350px;
+}
+/* fb img location */
+.fbimg{
+  position: relative;
+  top: -470px;
+  left: -20px;
+  height: 179px;
+}
+/* ggl maps img location */
+.mapsimg{
+  position: relative;
+  top: -873px;
+  left: 315px;
+  height: 179px;
+}
+
+#grid{
+  display:grid;
+  grid-template-columns: 50px 1fr;
+}
+#article {
+  padding-left: 58px;
+
+}
+table {
+  font-family:Arial;
+}
+
+
+/* 로고 위치 */
+.logoduras{
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+/* school insta */
+.imgpro img{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -ms-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+/* Eduka */
+.imgedu img{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -ms-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+/* Next Cloud */
+.imgnc img{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -ms-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+/* Lunch menu */
+.imglunch img{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -ms-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+/* lelivrescolaire */
+.imglivre img{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -ms-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+/* Pronote */
+.imgpro :hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+/* Eduka */
+.imgedu:hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+/* Next Cloud */
+.imgnc:hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+/* lunch menu */
+.imglunch:hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+/* lelivrescolaire */
+.imglivre:hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  transform:scale(1.2);
+}
+/* school insta animation */
+.instaimg{
+  background:url('duras_insta.png');
+  background-size:cover;
+  width:40vmin; height:auto;
+  display:block;
+  margin:30vmin auto;
+}
+text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:900;
+  font-family:arial;
+}
+.instaimg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 400px;
+}
+/* school facebook animation */
+.fbimg{
+  background:url('duras_facebook.png');
+  background-size:cover;
+  width:40vmin; height:auto;
+  display:block;
+  margin:30vmin auto;
+}
+text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:900;
+  font-family:arial;
+}
+.fbimg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 400px;
+}
+/* school ggl maps animation */
+.mapsimg{
+  background:url('duras_maps.png');
+  background-size:cover;
+  width:40vmin; height:auto;
+  display:block;
+  margin:30vmin auto;
+}
+text{
+  font-size:10px;
+  transition:font-size .4s ease-out;
+  font-weight:900;
+  font-family:arial;
+}
+.mapsimg:hover text{
+  transition:font-size .4s ease-in;
+  font-size: 400px;
+}
+#imgani {
+  height: 500px;
+  padding-top: 10%;
+}
